@@ -1,0 +1,20 @@
+///$tab Fechas
+//PMP Y PLP viene por bloque y requiere la indhor para obtener fecha
+CALENDARIO:
+LOAD
+    %KEY_BLOQUE_FUENTE_VERSION,
+    AñoMesNum,	
+    MesAño,
+	Mes,
+    Año,
+    Semana,
+    Dia,
+    Hora,
+	DiaMesHora,
+    Fecha,
+    Fecha_Hora,
+    fuente_indhor,
+    fecha_version_indhor,
+    numero_version_indhor
+FROM [lib://STG/PLATAFORMA_PROGRAMACION/STG_PRG_DIM_INDHOR_NORMATIVO.qvd] (qvd)
+WHERE Fecha <= AddMonths(fecha_version_indhor, 12) AND fuente_indhor = 'PMP';

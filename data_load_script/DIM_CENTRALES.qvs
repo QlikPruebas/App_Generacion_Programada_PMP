@@ -1,0 +1,27 @@
+///$tab DIM_CENTRALES
+DIM_CENTRALES:
+LOAD
+    %KEY_DICCIONARIO_CENTRALES,
+    id_central_it,
+    barra_centrales,
+    tecnologia,
+    sub_tipo_tecnologia,
+    combustible,
+    nombre_central,
+    unidades_centrales,
+    arreglo,
+    configuracion,
+    bloque_centrales,
+    almacenamiento,
+    ficticia,
+    terminal_gnl,
+    clasificacion,
+    empresa,
+    pais,
+    zona,
+    region,
+    comuna,
+    cuenca,
+    origen_diccionario
+FROM [lib://STG/PLATAFORMA_PROGRAMACION/STG_PRG_DIM_CENTRALES.qvd]
+(qvd);
